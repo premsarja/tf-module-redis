@@ -13,7 +13,7 @@ resource "aws_elasticache_cluster" "example" {
 
 resource "aws_elasticache_parameter_group" "default" {
   name   = "roboshop-${var.ENV}-redis"
-  family = "redis.2"
+  family = "redis6.2"
 }
 
 
