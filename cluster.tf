@@ -21,6 +21,6 @@ resource "aws_elasticache_subnet_group" "redis" {
   name   = "roboshop-${var.ENV}-redis-subnet-group"
   subnet_ids = [data.terraform_remote_state.vpc.outputs.PRIVATE_SUBNET_IDS]
   tags = {
-    name = roboshop-${var.ENV}-redis-subnet-subnet_group_name
+    name = "roboshop-${var.ENV}-redis-subnet-subnet_group_name"
   }
 }
