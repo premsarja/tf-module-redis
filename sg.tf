@@ -1,6 +1,6 @@
 
 resource "aws_security_group" "allows_redis" {
-  name        = "roboshop allows internal traffic"
+  name        = "redis allows internal traffic"
   description = "Allow private traffics"
   vpc_id =   data.terraform_remote_state.vpc.outputs.VPC_ID
 
