@@ -11,11 +11,13 @@ resource "aws_elasticache_cluster" "example" {
 }
 
 
+# creates the graoup name
 resource "aws_elasticache_parameter_group" "default" {
   name   = "roboshop-${var.ENV}-redis"
   family = "redis6.x"
 }
 
+# creates subnet 
 
 resource "aws_elasticache_subnet_group" "redis" {
   name   = "roboshop-${var.ENV}-redis-subnet-group"
