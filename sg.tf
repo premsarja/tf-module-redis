@@ -9,7 +9,7 @@ resource "aws_security_group" "allows_redis" {
     from_port   = 6379
     to_port     = 6379
     protocol    = "tcp"
-    cidr_blocks = [data.terraform_remote_state.vpc.outputs.PRIVATE_SUBNET_CIDR[1]]
+    cidr_blocks = [data.terraform_remote_state.vpc.outputs.VPC_CIDR]
   }
 
   egress {

@@ -1,4 +1,4 @@
-resource "aws_elasticache_cluster" "example" {
+resource "aws_elasticache_cluster" "redis" {
   cluster_id           = "roboshop-${var.ENV}-redis"
   engine               = "redis"
   node_type            = "cache.m4.large"
@@ -13,7 +13,7 @@ resource "aws_elasticache_cluster" "example" {
 
 # creates the graoup name
 resource "aws_elasticache_parameter_group" "default" {
-  name   = "roboshop-${var.ENV}-redis"
+  name   = "roboshop-${var.ENV}-redis-subnet-group"
   family = "redis6.x"
 }
 
